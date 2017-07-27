@@ -6,30 +6,11 @@
 
 <ion-content class="card-background-page">
 
-  <ion-card *ngFor="let event of events" (click) = "gotoInfoPage()">
+  <ion-card *ngFor="let event of events" (click) = "gotoInfoPage(event)">
     <img src={{event.img}}/>
     <div class="card-title">{{event.Name}}</div>
   </ion-card>
 
-<!-- 
-  <ion-card (click) = "gotoInfoPage()">
-    <img src="assets/musicimg/rocky.jpg"/>
-    <div class="card-title">A$AP Rocky</div>
-  </ion-card>
-
-  <ion-card (click) = "gotoInfoPage()">
-    <img src="assets/musicimg/cube.jpg"/>
-    <div class="card-title">Ice Cube</div>
-  </ion-card>
-
-  <ion-card (click) = "gotoInfoPage()">
-    <img src="assets/musicimg/logic.jpg"/>
-    <div class="card-title">Logic</div>
-  </ion-card>
-
-  <ion-card (click) = "gotoInfoPage()">
-    <img src="assets/musicimg/drake.jpg"/>
-    <div class="card-title">Drake</div>
-  </ion-card> -->
-
 </ion-content>
+
+ <link href="https://fonts.googleapis.com/css?family=Carme" rel="stylesheet">

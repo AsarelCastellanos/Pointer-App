@@ -8,15 +8,18 @@
 
   <ion-card>
 
-    <img src="assets/musicimg/asaprocky.jpg"/>
+    <img src={{title.img}}/>
 
     <ion-card-content>
       <ion-card-title text-center>
-        {{title}}
+        {{title.Name}}
       </ion-card-title>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p text-center><b>{{title.Date}}</b></p>
+      <p text-center><b>{{title.Locationn}}</b></p>
+      <button text-left ion-button clear small color="bright">
+      <b>{{title.Location}}</b>
+      </button>
+      <p text-center><b>{{title.Description}}</b></p>
     </ion-card-content>
 
     <ion-row no-padding>
@@ -38,3 +41,5 @@
   </ion-card>
  
 </ion-content>
+
+ <link href="https://fonts.googleapis.com/css?family=Carme" rel="stylesheet">

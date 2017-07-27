@@ -11,7 +11,8 @@ import { AlertController } from 'ionic-angular';
 export class InfoPage {
   title; 
   constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, public alertCtrl: AlertController) {
-    this.title = navParams.data.name
+    this.title = navParams.data.data;
+    console.log(this.title);
   }
 
   ionViewDidLoad() {

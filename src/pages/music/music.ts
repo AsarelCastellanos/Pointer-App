@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { InfoPage } from '../info/info';
-import 'rxjs/add/operator/map'
-import { Http } from '@angular/http'
+import 'rxjs/add/operator/map';
+import { Http } from '@angular/http';
+import { ProfilePage } from '../profile/profile';
 
 @Component({
   selector: 'page-music',
@@ -29,8 +30,15 @@ export class MusicPage {
 
   }
 
+  goToProfile(){
+    this.navCtrl.push(ProfilePage)
+  }
+
   gotoInfoPage(e){
-    this.navCtrl.push(InfoPage, e )
+
+    this.navCtrl.push(InfoPage,{
+      data: e
+    })
     
   }
 
