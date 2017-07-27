@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+      <ion-buttons start>
+        <button ion-button (click) = "goToSavedEvents()" color="bright">
+      <img class="bookmark" src = "assets/icon/bookmark-savedevents.png"/>
+        </button>
+      </ion-buttons>
+      <ion-title color = "text">Categories</ion-title>
+      <ion-buttons end>
+        <button ion-button (click) = "goToProfile()" color="bright">
+      <img class="profile" src = "assets/icon/profile-icon.png"/>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" padding>
+
+  <ion-card (click) = "goToArt()">
+    <img src="assets/eventimg/art.jpg"/>
+    <div class="card-title">Art</div>
+  </ion-card>
+  
+  <ion-card (click) = "goToFilm()" >
+    <img src="assets/eventimg/theater.jpg"/>
+    <div class="card-title">Film</div>
+  </ion-card>
+
+   <ion-card (click) = "goToFood()">
+    <img src="assets/eventimg/food.jpg"/>
+    <div class="card-title">Food</div>
+  </ion-card>
+
+  <ion-card (click) = "goToMusic()">
+    <img src="assets/eventimg/concert.jpg"/>
+    <div class="card-title">Music</div>
+  </ion-card>
+
+   <ion-card (click) = "goToReligious()">
+    <img src="assets/eventimg/religion.jpg"/>
+    <div class="card-title">Religious</div>
+  </ion-card>
+
+    <ion-card (click) = "goToSports()">
+    <img src="assets/eventimg/soccer.jpg"/>
+    <div class="card-title">Sports</div>
+  </ion-card>
+
+</ion-content>

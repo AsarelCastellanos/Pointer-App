@@ -1,0 +1,39 @@
+page-rocky {
+
+    ion-title{
+        -webkit-text-fill-color: #c62e2e;
+    }
+
+    .paragraph {
+        -webkit-text-fill-color: #c62e2e;
+    }
+    ion-card {
+        height: 200%;
+        .paragraph {
+        -webkit-text-fill-color: #c62e2e;
+    }
+    }
+
+    .save-events {
+        height: 10%,
+    }
+
+    .card-background-page {
+
+        ion-card {
+            position: relative;
+            text-align: center;
+        }
+
+        .card-title {
+            position: absolute;
+            top: 36%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+        }
+
+    }
+
+}

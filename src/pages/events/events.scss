@@ -1,0 +1,38 @@
+page-events {
+
+
+  ion-title{
+        -webkit-text-fill-color: #c62e2e;
+    }
+
+  ion-card{
+    height: 35%
+  }
+
+  .bookmark{
+    height: 100%
+  }
+
+  .profile{
+    height: 100%
+  }
+
+    .card-background-page {
+
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
+
+      .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 5.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+      }
+      
+    }
+
+}

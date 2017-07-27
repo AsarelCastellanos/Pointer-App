@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Event Information</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+  <ion-card>
+
+    <img src="assets/musicimg/asaprocky.jpg"/>
+
+    <ion-card-content>
+      <ion-card-title text-center>
+        {{title}}
+      </ion-card-title>
+      <p></p>
+      <p></p>
+      <p></p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-left>
+        <button (click)="saveEvent()" ion-button clear small color="light">
+         <img class="save-events" src="assets/icon/save-events-icon.png"/>
+          <p class ="paragraph" style="margin-left:8px">Save</p>
+        </button>
+      </ion-col>
+ 
+      <ion-col text-right>
+        <button (click)="regularShare()" ion-button clear small color="light">
+         <img class="save-events" src="assets/icon/sharecustom.png"/>
+         <p style="margin-left:8px">Share</p>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+ 
+</ion-content>

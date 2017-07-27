@@ -1,0 +1,22 @@
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { SavedPage } from '../saved/saved';
+
+@Component({
+  selector: 'page-profile',
+  templateUrl: 'profile.html',
+})
+export class ProfilePage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ProfilePage');
+  }
+
+  goToSearch() {
+    this.navCtrl.push(SavedPage)
+  }
+
+}
