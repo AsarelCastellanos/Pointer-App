@@ -20,7 +20,7 @@ export class MusicPage {
   downloadEvents(){
     this.events = null;
 
-    this.http.get('https://miligate.herokuapp.com/pullEvents').map(res => res.json()).subscribe(data=> {
+    this.http.get('https://miligate.herokuapp.com/pullMusic').map(res => res.json()).subscribe(data=> {
       this.events = data;
       console.log(this.events)
     })

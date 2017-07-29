@@ -1,15 +1,14 @@
-
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Religious</ion-title>
+    <ion-title>Religious Events</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content class="card-background-page">
 
-<ion-content padding>
+  <ion-card *ngFor="let event of events" (click) = "gotoInfoPage(event)">
+    <img src={{event.img}}/>
+    <div class="card-title">{{event.Name}}</div>
+  </ion-card>
 
 </ion-content>
-
- <link href="https://fonts.googleapis.com/css?family=Carme" rel="stylesheet">
