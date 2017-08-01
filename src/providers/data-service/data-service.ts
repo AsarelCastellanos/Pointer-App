@@ -11,7 +11,8 @@ export class DataServiceProvider {
     console.log('Service: DataService');
   }
   public getEvents() {
-    return this.http.get(this.apiUrl + "pullEvents")
+    console.log("Starting to pull.")
+    return this.http.get(this.apiUrl + "pullReligious")
     .map(response => response.json())
   }
 

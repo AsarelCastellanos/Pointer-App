@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { SavedPage } from '../saved/saved';
 import { MusicPage } from '../music/music';
@@ -10,20 +10,22 @@ import { ArtPage } from '../art/art';
 import { ReligiousPage } from '../religious/religious';
 
 import { DataServiceProvider } from "../../providers/data-service/data-service";
-
+import { SplashScreen } from '@ionic-native/splash-screen'
 import { Observable } from "rxjs/Observable"; 
+
 @Component({
   selector: 'page-events',
   templateUrl: 'events.html'
 })
 export class EventsPage {
   events : Observable <any>;
-  constructor(public navCtrl: NavController, public dataService : DataServiceProvider ) {
-  this.loadEvents();
+  constructor(public navCtrl: NavController, public dataService : DataServiceProvider, private splashScreen: SplashScreen, public loadingCtrl: LoadingController) {
+  // this.loadEvents();
   }
  public loadEvents() {
    this.events = this.dataService.getEvents();
    console.log(this.events)
+   console.log("Hello")
  }
 
   goToProfile() {
@@ -35,10 +37,10 @@ export class EventsPage {
   }
   
   goToMusic() {
-    this.navCtrl.push(MusicPage, {name: "events"})
+    this.navCtrl.push(MusicPage)
   }
   goToFilm(){
-    this.navCtrl.push(FilmPage)
+    this.navCtrl.push(FilmPage,)
   }
   
   goToFood(){
@@ -56,5 +58,19 @@ export class EventsPage {
   goToArt(){
     this.navCtrl.push(ArtPage)
   }
+
+    presentLoadingDefault() {
+    let loading = this.loadingCtrl.create({
+      spinner: "crescent",
+      content: 'Loading events...'
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      loading.dismiss();
+    }, 1000)
+  }
+
 }
 
